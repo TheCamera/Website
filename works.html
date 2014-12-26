@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+	<title>Lucas Lacámara - Works</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
+
+</head>
+
+
+
+<body>
+
+<!--HEADER-->
+<header id="header" class="portfolio-header clearfix">
+<script id="profile-template" type="text/x-handlebars-template">
+    
+    <!--<figure class="profile-avatar"><img src="{{user.images.[138]}}" alt=""></figure>-->
+        
+        <h1 class="profile-name">{{user.display_name}}</h1>
+
+        <!--<div class="profile-fields">
+            <ul class="field-list">
+                {{#each user.fields}}
+                    <li class="field-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>-->
+
+        <!--<div class="social-links">
+            <h2 class="instagram">{{user.instagram}}</h2>
+        </div>-->
+
+        <!--<div class="profile-location fi-marker">{{user.city}}, {{user.country}}</div>-->
+</script>
+</header>
+
+<!--CONTENT-->
+<div id="content" class="content-area clearfix">
+<div id="portfolio" class="portfolio-area clearfix">
+    <script id="portfolio-template" type="text/x-handlebars-template">
+    <ul class="portfolio-template" type="text/x-handlebars-template">
+        {{#each projects}}
+        <li class="portfolio-item">
+        <div class="portfolio-content">
+
+
+            <figure class="portfolio-cover" title="{{this.name}}" data-project-id="{{this.id}}">
+                {{#if this.covers.[404]}}
+                    <img class="portfolio-image" src="{{this.covers.[404]}}" alt="">
+                {{else}}
+                    {{#if this.covers.[230]}}
+                        <img class="portfolio-image" src="{{this.covers.[230]}}" alt="">
+                    {{else}}
+                        <img class="portfolio-image" src="{{this.covers.[202]}}" alt="">
+                    {{/if}}
+                {{/if}}
+            </figure>
+
+
+            <h2 class="portfolio-title">{{this.name}}</h2>
+
+
+            <div class="portfolio-fields">
+                <ul class="field-list">
+                    {{#each this.fields}}
+                        <li class="field-item">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+
+        </div>
+        </li>
+        {{/each}}
+    </ul>
+    </script>
+</div>
+</div>
+
+<!--FOOTER-->
+<!--<footer id="footer" class="portfolio-footer clearfix">
+
+</footer>-->
+
+<script src="js/handlebars-v2.0.0.js"></script>
+<script src="js/jquery.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
